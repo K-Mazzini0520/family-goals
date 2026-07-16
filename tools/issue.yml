@@ -1,0 +1,245 @@
+repository:
+  owner: YOUR_GITHUB_ID
+  repo: family-goals
+
+milestones:
+  - title: MVP
+    description: 家族で目標共有し、毎日の達成記録ができる
+
+labels:
+  - feature
+  - frontend
+  - backend
+  - infrastructure
+  - ai
+  - test
+  - docs
+
+epics:
+
+  - id: EPIC-01
+    title: 開発環境
+    assignee: Codex
+
+    issues:
+
+      - number: 1
+        title: Spring Bootプロジェクト作成
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 2
+        title: Reactプロジェクト作成
+        labels: [feature, frontend]
+        milestone: MVP
+
+      - number: 3
+        title: Python(FastAPI)プロジェクト作成
+        labels: [feature, ai]
+        milestone: MVP
+
+      - number: 4
+        title: Docker Compose構築
+        labels: [feature, infrastructure]
+        milestone: MVP
+
+      - number: 5
+        title: PostgreSQL接続
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 6
+        title: GitHub Actions初期設定
+        labels: [feature, infrastructure]
+        milestone: MVP
+
+  - id: EPIC-02
+    title: 認証
+    assignee: Codex
+
+    issues:
+
+      - number: 10
+        title: User Entity作成
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 11
+        title: ユーザー登録API
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 12
+        title: ログインAPI
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 13
+        title: JWT認証
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 14
+        title: Spring Security設定
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 15
+        title: ログイン画面
+        labels: [feature, frontend]
+        milestone: MVP
+
+      - number: 16
+        title: 新規登録画面
+        labels: [feature, frontend]
+        milestone: MVP
+
+  - id: EPIC-03
+    title: 家族管理
+    assignee: Codex
+
+    issues:
+
+      - number: 20
+        title: Family Entity
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 21
+        title: FamilyMember Entity
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 22
+        title: 家族作成API
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 23
+        title: 招待コード生成
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 24
+        title: 家族参加API
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 25
+        title: 家族一覧API
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 26
+        title: 家族一覧画面
+        labels: [feature, frontend]
+        milestone: MVP
+
+  - id: EPIC-04
+    title: 目標管理
+    assignee: Codex
+
+    issues:
+
+      - number: 30
+        title: Goal Entity
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 31
+        title: 目標登録API
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 32
+        title: 目標一覧API
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 33
+        title: 目標詳細API
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 34
+        title: 目標更新API
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 35
+        title: 目標削除API
+        labels: [feature, backend]
+        milestone: MVP
+
+      - number: 36
+        title: 目標一覧画面
+        labels: [feature, frontend]
+        milestone: MVP
+
+      - number: 37
+        title: 目標登録画面
+        labels: [feature, frontend]
+        milestone: MVP
+
+      - number: 38
+        title: 目標詳細画面
+        labels: [feature, frontend]
+        milestone: MVP
+
+# 以下同様
+
+# EPIC-05
+# EPIC-06
+# EPIC-07
+# EPIC-08
+# EPIC-09
+# EPIC-10
+
+# Test
+
+tests:
+
+  - number: 100
+    title: Backend Unit Test
+    labels: [test, backend]
+    milestone: MVP
+
+  - number: 101
+    title: Frontend Test
+    labels: [test, frontend]
+    milestone: MVP
+
+  - number: 102
+    title: Python Test
+    labels: [test, ai]
+    milestone: MVP
+
+  - number: 103
+    title: 結合テスト
+    labels: [test]
+    milestone: MVP
+
+  - number: 104
+    title: リリース確認
+    labels: [test]
+    milestone: MVP
+
+# Documents
+
+documents:
+
+  - number: 110
+    title: README更新
+    labels: [docs]
+
+  - number: 111
+    title: API仕様更新
+    labels: [docs]
+
+  - number: 112
+    title: DB設計更新
+    labels: [docs]
+
+  - number: 113
+    title: 画面設計更新
+    labels: [docs]
