@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: family-goals-api
+server:
+  port: 8080
