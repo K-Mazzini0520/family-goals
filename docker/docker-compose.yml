@@ -1,0 +1,46 @@
+services:
+  frontend:
+    build:
+      context: ../frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ../backend
+    environment:
+      DB_URL: jdbc:postgresql://postgres:5432/family_goals
+      DB_USERNAME: family_goals
+      DB_PASSWORD: family_goals
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  python:
+    build:
+      context: ../python
+    ports:
+      - "8000:8000"
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: family_goals
+      POSTGRES_USER: family_goals
+      POSTGRES_PASSWORD: family_goals
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U family_goals -d family_goals"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres-data:
